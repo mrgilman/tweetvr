@@ -9,14 +9,8 @@ feature 'User visits dashboard' do
 
   scenario 'logged in user is not redirected' do
     user = create(:user)
-    sign_in(user)
-    visit dashboard_path
+    visit dashboard_path(as: user)
 
     expect(current_path).to eq dashboard_path
-  end
-
-  def sign_in(user)
-    visit root_path
-    click_on 'Sign in with Twitter'
   end
 end
