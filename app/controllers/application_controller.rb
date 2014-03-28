@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :authorize
 
   def current_user
-    User.find_by_id session[:user_id]
+    User.find_by_remember_token session[:remember_token]
   end
 
   private

@@ -18,6 +18,21 @@ describe User do
       expect { User.find_or_create_from_omniauth(omniauth_params) }.to change(User, :count).by(1)
     end
 
+    it 'sets a remember token' do
+      allow(SecureRandom).to receive(:hex).and_return('remember_token')
+      user = create(:user)
+
+      expect(user.remember_token).to eq('remember_token')
+    end
+
+    it 'sets a unique remember token' do
+      allow(SecureRandom).to receive(:hex).and_return('used_token', 'used_token', 'remember_token')
+      create(:user)
+      user = create(:user)
+
+      expect(user.remember_token).to eq('remember_token')
+    end
+
     it 'does not create a new user if user with returned uid exists' do
       create(:user, uid: '12345')
 

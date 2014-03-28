@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   validates :token, presence: true
   validates :secret, presence: true
 
+  before_create :generate_remember_token
+
   def self.find_or_create_from_omniauth(params)
     where(uid: params['uid']).first || create_from_omniauth(params)
   end
@@ -17,4 +19,13 @@ class User < ActiveRecord::Base
     end
   end
   private_class_method :create_from_omniauth
+
+  private
+
+  def generate_remember_token
+    self.remember_token = SecureRandom.hex
+    while User.where(remember_token: self.remember_token).exists?
+      self.remember_token = SecureRandom.hex
+    end
+  end
 end

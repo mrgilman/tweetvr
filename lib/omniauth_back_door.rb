@@ -17,7 +17,7 @@ module Omniauth
 
       if user_id.present?
         user = User.find(user_id)
-        env['rack.session'][:user_id] = user.id
+        env['rack.session'][:remember_token] = user.remember_token
       end
     end
   end
