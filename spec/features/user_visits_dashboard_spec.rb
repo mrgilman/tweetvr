@@ -13,4 +13,13 @@ feature 'User visits dashboard' do
 
     expect(current_path).to eq dashboard_path
   end
+
+  scenario 'user sees future recordings' do
+    recording = create(:recording)
+    user = recording.user
+    visit dashboard_path(as: user)
+
+    expect(page).to have_content I18n.l(recording.start_at)
+    expect(page).to have_content I18n.l(recording.end_at)
+  end
 end

@@ -17,6 +17,7 @@ module Tweetvr
 
     config.generators do |generate|
       generate.helper false
+      generate.factory_girl false
       generate.javascript_engine false
       generate.request_specs false
       generate.routing_specs false
