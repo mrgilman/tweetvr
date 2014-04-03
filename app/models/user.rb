@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   validates :token, presence: true
   validates :secret, presence: true
 
+  has_many :recordings
+
   before_create :generate_remember_token
 
   def self.find_or_create_from_omniauth(params)
