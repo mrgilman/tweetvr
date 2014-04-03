@@ -7,6 +7,10 @@ class Dashboard
     user.recordings
   end
 
+  def new_recording
+    @recording ||= Recording.new
+  end
+
   private
 
   attr_reader :user
