@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :recording do
-    start_at Chronic.parse('Tomorrow at 7pm')
-    end_at Chronic.parse('Tomorrow at 8pm')
+    sequence(:start_at) { |i| i.hours.from_now }
+    sequence(:end_at) { |i| i.hours.from_now + 30.minutes }
     user
   end
 
