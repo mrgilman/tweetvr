@@ -22,6 +22,7 @@ gem 'simple_form'
 gem 'title'
 gem 'uglifier'
 gem 'unicorn'
+gem 'validates_overlap'
 
 group :development do
   gem 'better_errors'
