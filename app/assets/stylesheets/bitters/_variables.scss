@@ -1,0 +1,42 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+
+$base-font-family: 'omnes-pro', helvetica, sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$teal-blue: #53C9F4;
+$medium-blue: #216BF3;
+$dark-blue: #1F3349;
+$faint-blue: #D3E1FD;
+$medium-gray: #BDC2C8;
+$light-gray: #D1DBE2;
+$off-white: #F7F8F9;
+$bright-red: #FF243E;
+
+// Body Color
+$base-body-color: white;
+
+//  Font Colors
+$base-font-color: $dark-blue;
+$base-accent-color: $medium-blue;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 20);
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$error-color: $bright-red;
+$notice-color: $faint-blue;
+$success-color: $medium-blue;
