@@ -209,6 +209,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    validates_overlap (0.2.0)
+      rails (>= 3.0.0)
     webmock (1.17.4)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
@@ -255,4 +257,5 @@ DEPENDENCIES
   title
   uglifier
   unicorn
+  validates_overlap
   webmock

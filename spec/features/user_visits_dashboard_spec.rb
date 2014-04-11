@@ -22,4 +22,18 @@ feature 'User visits dashboard' do
     expect(page).to have_content I18n.l(recording.start_at)
     expect(page).to have_content I18n.l(recording.end_at)
   end
+
+  scenario 'user can create a new recording' do
+    user = create(:user)
+    visit dashboard_path(as: user)
+
+    fill_in 'Start at', with: 24.hours.from_now.to_s(:db)
+    fill_in 'End at', with: 25.hours.from_now.to_s(:db)
+    click_on 'Save Recording'
+
+    recording = user.recordings.first
+
+    expect(page).to have_content I18n.l(recording.start_at)
+    expect(page).to have_content I18n.l(recording.end_at)
+  end
 end
