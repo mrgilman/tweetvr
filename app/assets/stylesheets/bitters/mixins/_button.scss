@@ -1,0 +1,18 @@
+@mixin button($background-color) {
+  background-clip: padding-box;
+  background-color: $background-color;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-size: em(14);
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 9px 18px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover {
+    background-color: darken($background-color, 10);
+  }
+}

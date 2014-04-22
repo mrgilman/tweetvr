@@ -1,4 +1,16 @@
-<h2>Dashboard</h2>
+<h1>Your Streams</h1>
 
-<%= render partial: 'recordings/form', recording: @dashboard.new_recording %>
+<section class="upcoming-recording">
+  <h4>Upcoming Recording Title</h4>
+</section>
+
+<section class="new-recording">
+  <h4>New Recording Title</h4>
+</section>
+
+<section class="past-recording">
+  <h4>Past Recording Title</h4>
+</section>
+
 <%= render partial: 'recording', collection: @dashboard.recordings %>
+<%= render partial: 'recordings/form', recording: @dashboard.new_recording %>
