@@ -1,0 +1,8 @@
+.main-content {
+  @include outer-container;
+  margin: 3em auto;
+
+  h1 {
+    text-align: center;
+  }
+}

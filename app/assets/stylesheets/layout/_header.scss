@@ -1,0 +1,16 @@
+nav.signed-in {
+  text-align: right;
+
+  .avatar {
+    border-radius: 3px;
+    margin-right: 3px;
+    position: relative;
+    top: 5px;
+  }
+
+  .sign-out {
+    @include button($teal-blue);
+    margin-left: 1.5em;
+  }
+}
+
