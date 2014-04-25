@@ -9,7 +9,7 @@ nav.signed-in {
   }
 
   .sign-out {
-    @include button($teal-blue);
+    @include button($medium-gray);
     margin-left: 1.5em;
   }
 }

@@ -1,15 +1,41 @@
-<h1>Your Streams</h1>
+<h1 class="page-title">Your Streams</h1>
 
-<section class="upcoming-recording">
-  <h4>Upcoming Recording Title</h4>
-</section>
+<section class="dashboard-streams">
+  <section class="upcoming-recording">
+    <h2 class="recording-date">June 12, 2014</h2>
+    <h1>Upcoming Recording Title</h1>
+    <h3 class="recording-time">
+      10:00pm - 11:05pm ET
+      <em>(2hrs, 5min)</em>
+    </h3>
+    <div class="button-container">
+      <%= link_to "edit", "#", class: "edit-button" %>
+    </div>
+  </section>
 
-<section class="new-recording">
-  <h4>New Recording Title</h4>
-</section>
+  <section class="new-recording">
+    <h2 class="recording-date">March 12, 2014</h2>
+    <h1>New Recording Title</h1>
+    <h3 class="recording-time">
+      10:00pm - 11:05pm ET
+      <em>(2hrs, 5min)</em>
+    </h3>
+    <div class="button-container">
+      <%= link_to "play", "#", class: "play-button" %>
+    </div>
+  </section>
 
-<section class="past-recording">
-  <h4>Past Recording Title</h4>
+  <section class="past-recording">
+    <h2 class="recording-date">March 12, 2014</h2>
+    <h1>Past Recording Title</h1>
+    <h3 class="recording-time">
+      10:00pm - 11:05pm ET
+      <em>(2hrs, 5min)</em>
+    </h3>
+    <div class="button-container">
+      <%= link_to "play", "#", class: "play-button" %>
+    </div>
+  </section>
 </section>
 
 <%= render partial: 'recording', collection: @dashboard.recordings %>

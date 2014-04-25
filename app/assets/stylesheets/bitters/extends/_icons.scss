@@ -1,0 +1,24 @@
+%icon {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+%icon-button {
+  width: 95px;
+  text-align: right;
+
+  &:after {
+    @extend %icon;
+    padding-left: 5px;
+  }
+}

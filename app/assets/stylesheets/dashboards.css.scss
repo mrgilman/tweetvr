@@ -1,0 +1,65 @@
+.dashboard-streams {
+  @include span-columns(8);
+  float: none;
+  margin: 2em auto;
+
+  h1 {
+    font-size: em(21);
+    font-weight: 500;
+    margin: .3em 0;
+  }
+
+  .recording-date,
+  .recording-time {
+    font-size: em(14);
+    font-weight: 400;
+  }
+
+  .upcoming-recording {
+    @include recording(lighten($edit-color, 25));
+  }
+
+  .new-recording {
+    @include recording(lighten($play-color, 35));
+
+    h1::after {
+      color: $medium-blue;
+      content: 'new';
+      font-size: em(12);
+      font-style: italic;
+      margin-left: 8px;
+    }
+  }
+
+  .past-recording {
+    @include recording(lighten($light-gray, 7));
+  }
+
+  .button-container {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 2em;
+    top: 0;
+  }
+
+  .play-button {
+    @extend %icon-button;
+    @extend %vertical-align;
+    @include button($play-color);
+
+    &:after {
+      content: '\f10c';
+    }
+  }
+
+  .edit-button {
+    @extend %icon-button;
+    @extend %vertical-align;
+    @include button($edit-color);
+
+    &:after {
+      content: '\f108';
+    }
+  }
+}
