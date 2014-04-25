@@ -9,3 +9,7 @@
 %flash-success {
   @include flash($success-color);
 }
+
+#flash {
+  text-align: center;
+}
