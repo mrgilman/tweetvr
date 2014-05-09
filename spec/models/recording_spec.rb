@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Recording do
+  it { should have_many(:tweets) }
+
   it 'validates that a user does not have overlapping recordings' do
     user = create(:user)
     _existing_recording = create(
