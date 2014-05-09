@@ -53,6 +53,7 @@ describe User do
       'uid' => '12345',
       'info' => {
         'nickname' => 'TweetVR_',
+        'image' => 'http://abs.twimg.com/image.jpg'
       },
       'credentials' => {
         'token' => 'abc123',

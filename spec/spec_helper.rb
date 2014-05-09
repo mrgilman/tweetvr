@@ -35,6 +35,7 @@ OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
   :uid => '123545',
   :info => {
     :nickname => 'TweetVR_',
+    :image => 'http://image.com'
   },
   :credentials => {
     :token => 'abc123',
