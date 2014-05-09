@@ -14,6 +14,13 @@ feature 'User visits dashboard' do
     expect(current_path).to eq dashboard_path
   end
 
+  scenario 'user sees header with username' do
+    user = create(:user)
+    visit dashboard_path(as: user)
+
+    expect(page).to have_content user.username
+  end
+
   scenario 'user sees future recordings' do
     recording = create(:recording)
     user = recording.user
