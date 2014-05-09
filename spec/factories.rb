@@ -8,6 +8,7 @@ FactoryGirl.define do
   factory :user do
     sequence(:uid)
     username 'TweetVR_'
+    image_url 'http://abs.twimg.com/sticky/default_profile_images/default_profile_6_normal.png'
     token 'abc123'
     secret 'xyz890'
 

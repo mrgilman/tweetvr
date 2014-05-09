@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
     create! do |user|
       user.uid = params['uid']
       user.username = params['info']['nickname']
+      user.image_url = params['info']['image']
       user.token = params['credentials']['token']
       user.secret = params['credentials']['secret']
     end
