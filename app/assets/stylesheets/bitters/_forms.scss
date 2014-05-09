@@ -86,10 +86,10 @@ select {
 
 button,
 input[type="submit"] {
-  @include button($medium-blue);
+  @include button($bright-blue);
   @include appearance(none);
+  @include user-select(none);
   cursor: pointer;
-  user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 }

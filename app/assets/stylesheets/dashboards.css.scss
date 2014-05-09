@@ -23,7 +23,7 @@
     @include recording(lighten($play-color, 35));
 
     h1::after {
-      color: $medium-blue;
+      color: $bright-blue;
       content: 'new';
       font-size: em(12);
       font-style: italic;

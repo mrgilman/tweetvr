@@ -14,7 +14,7 @@ $base-border-radius: em(3);
 ///////////////////////////////////////////////////////////////////////////////
 
 $teal-blue: #53c9f4;
-$medium-blue: #216bf3;
+$bright-blue: #216bf3;
 $dark-blue: #1f3349;
 $medium-gray: #bdc2c8;
 $light-gray: #d1dbe2;
@@ -26,7 +26,7 @@ $base-body-color: white;
 
 //  Font Colors
 $base-font-color: $dark-blue;
-$base-accent-color: $medium-blue;
+$base-accent-color: $bright-blue;
 
 //  Text Link Colors
 $base-link-color: $base-accent-color;
@@ -37,9 +37,9 @@ $base-border-color: $light-gray;
 
 // Flash Colors
 $error-color: $bright-red;
-$notice-color: $medium-blue;
-$success-color: $medium-blue;
+$notice-color: $bright-blue;
+$success-color: $bright-blue;
 
 // Action Colors
 $edit-color: $teal-blue;
-$play-color: $medium-blue;
+$play-color: $bright-blue;
