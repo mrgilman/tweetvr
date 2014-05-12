@@ -1,0 +1,68 @@
+.timeline-container {
+  @include position(fixed, 0 0px 0px 0px);
+  background-color: $dark-blue;
+  color: white;
+  padding: 20px 0 30px 0;
+}
+
+.playback-buttons {
+  display: inline-block;
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+
+  button {
+    background-color: transparent;
+    color: white;
+    margin: 0 1em;
+    padding: 0;
+
+    &:hover {
+      color: $teal-blue;
+    }
+  }
+}
+
+.time-past {
+  @include position(absolute, 0 0 0 0);
+  display: inline-block;
+  font-size: .9em;
+  width: 100%;
+}
+
+.time-remaining {
+  display: inline-block;
+  font-size: .9em;
+  text-align: right;
+  width: 100%;
+}
+
+.progress-bar {
+  margin: 0 auto;
+  max-width: em(800);
+  width: 90%;
+
+  .bar-full-length {
+    @extend %progress-bar;
+    background-color: lighten($dark-blue, 10);
+    margin-top: 5px;
+    position: relative;
+  }
+
+  .bar-current {
+    @extend %progress-bar;
+    background-color: $play-color;
+    width: 70%;
+  }
+
+  .bar-scrubber {
+    background-color: $play-color;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    position: absolute;
+    top: -8px;
+    left: calc(70% - 2px);
+    width: 20px;
+  }
+}
