@@ -14,11 +14,14 @@
 }
 
 %icon-button {
-  width: 95px;
+  position: relative;
   text-align: right;
+  width: 95px;
 
   &:after {
     @extend %icon;
-    padding-left: 5px;
+    padding-left: 6px;
+    position: relative;
+    top: -2px;
   }
 }

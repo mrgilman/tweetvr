@@ -5,7 +5,7 @@
   color: white;
   display: inline-block;
   font-size: em(14);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 1em;
   padding: .7em 1.2em;
@@ -14,5 +14,6 @@
 
   &:hover {
     background-color: darken($background-color, 10);
+    color: white;
   }
 }

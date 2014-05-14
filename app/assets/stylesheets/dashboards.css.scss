@@ -3,7 +3,7 @@
   float: none;
   margin: 2em auto;
 
-  h1 {
+  .recording-title {
     font-size: em(21);
     font-weight: 500;
     margin: .3em 0;
@@ -15,24 +15,23 @@
     font-weight: 400;
   }
 
-  .upcoming-recording {
-    @include recording(lighten($edit-color, 25));
-  }
+  .user-recording {
+    border: 1px solid lighten($dark-blue, 70);
+    border-bottom: none;
+    padding: 1.2em 1.5em;
+    position: relative;
 
-  .new-recording {
-    @include recording(lighten($play-color, 35));
-
-    h1::after {
-      color: $bright-blue;
-      content: 'new';
-      font-size: em(12);
-      font-style: italic;
-      margin-left: 8px;
+    &:last-child {
+      border-bottom: 1px solid lighten($dark-blue, 70);
     }
   }
 
-  .past-recording {
-    @include recording(lighten($light-gray, 7));
+  .unwatched-recording h1::after {
+    color: $bright-blue;
+    content: 'new';
+    font-size: em(12);
+    font-style: italic;
+    margin-left: 8px;
   }
 
   .button-container {
@@ -50,6 +49,7 @@
 
     &:after {
       content: '\f10c';
+      font-size: .9em;
     }
   }
 
@@ -60,6 +60,52 @@
 
     &:after {
       content: '\f108';
+    }
+  }
+}
+
+.new-recording-button {
+  @extend %icon-button;
+  @include button($bright-red);
+  float: right;
+  margin-top: 10px;
+
+  &:after {
+    content: '\f10d';
+  }
+}
+
+.schedule-recording {
+  @include position(fixed, 0 0px 0px 0px);
+  text-align: center;
+  background-color: $dark-blue;
+  color: white;
+  display: none;
+
+  form {
+    @include span-columns(6);
+    border: none;
+    float: none;
+    text-align: left;
+
+    &:last-child {
+      margin: 0 auto; //overriding Bourbon styles
+      padding: 2em 0;
+    }
+
+    .button {
+      background-color: $bright-red;
+    }
+  }
+
+  .icon-x {
+    @include position(absolute, 15px 30px 0 0);
+    color: white;
+    font-size: 1.4em;
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }

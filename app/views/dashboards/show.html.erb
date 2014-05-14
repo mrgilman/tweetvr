@@ -1,9 +1,11 @@
-<h1 class="page-title">Your Streams</h1>
-
 <section class="dashboard-streams">
-  <section class="upcoming-recording">
+
+  <%= link_to 'New', '#', class: 'new-recording-button js-new-recording-button' %>
+  <h1 class="page-title">Your Recordings</h1>
+
+  <section class="user-recording">
     <h2 class="recording-date">June 12, 2014</h2>
-    <h1>Upcoming Recording Title</h1>
+    <h1 class="recording-title">Upcoming Recording Title</h1>
     <h3 class="recording-time">
       10:00pm - 11:05pm ET
       <em>(2hrs, 5min)</em>
@@ -13,9 +15,9 @@
     </div>
   </section>
 
-  <section class="new-recording">
+  <section class="unwatched-recording user-recording">
     <h2 class="recording-date">March 12, 2014</h2>
-    <h1>New Recording Title</h1>
+    <h1 class="recording-title">New Recording Title</h1>
     <h3 class="recording-time">
       10:00pm - 11:05pm ET
       <em>(2hrs, 5min)</em>
@@ -25,9 +27,9 @@
     </div>
   </section>
 
-  <section class="past-recording">
-    <h2 class="recording-date">March 12, 2014</h2>
-    <h1>Past Recording Title</h1>
+  <section class="user-recording">
+    <h2 class="recording-date">March 1, 2014</h2>
+    <h1 class="recording-title">Past Recording Title</h1>
     <h3 class="recording-time">
       10:00pm - 11:05pm ET
       <em>(2hrs, 5min)</em>
@@ -36,7 +38,24 @@
       <%= link_to "play", "#", class: "play-button" %>
     </div>
   </section>
+
+  <section class="user-recording">
+    <h2 class="recording-date">March 1, 2014</h2>
+    <h1 class="recording-title">Past Recording Title</h1>
+    <h3 class="recording-time">
+      10:00pm - 11:05pm ET
+      <em>(2hrs, 5min)</em>
+    </h3>
+    <div class="button-container">
+      <%= link_to "play", "#", class: "play-button" %>
+    </div>
+  </section>
+
+
 </section>
 
-<%= render partial: 'recording', collection: @dashboard.recordings %>
-<%= render partial: 'recordings/form', recording: @dashboard.new_recording %>
+<section class="schedule-recording js-schedule-recording">
+  <a href="#" aria-label="close window" class="icon-x js-icon-x"></a>
+  <%= render partial: 'recording', collection: @dashboard.recordings %>
+  <%= render partial: 'recordings/form', recording: @dashboard.new_recording %>
+</section>
